@@ -94,22 +94,6 @@ class PlanetRow extends StatelessWidget{
 
 
 
-    Widget planetThumbnail(String img) {
-      return Container(
-        margin: EdgeInsets.symmetric(
-            vertical: 16
-        ),
-        alignment: FractionalOffset.centerLeft,
-        child: Image(
-          image: AssetImage(img),
-          height: 92,
-          width: 92,
-        ),
-      );
-    }
-
-
-
     final planetCard = Container(
       height: 124,
       child: planetCardContent(),
@@ -128,6 +112,21 @@ class PlanetRow extends StatelessWidget{
       ),
     );
 
+    final planetThumbnail = Container(
+        margin: EdgeInsets.symmetric(
+          vertical: 16
+        ),
+      alignment: FractionalOffset.centerLeft,
+      child: Hero(
+          tag: "planet-hero-${planet.id}",
+          child: Image(
+              image: AssetImage(planet.image),
+              height: 92,
+              width: 92,
+          )
+      ),
+    );
+
 
     return GestureDetector(
       onTap: () => Navigator.of(context).push(PageRouteBuilder(
@@ -142,7 +141,7 @@ class PlanetRow extends StatelessWidget{
         child: Stack(
           children: <Widget>[
             planetCard,
-            planetThumbnail(planet.image)
+            planetThumbnail
           ],
         ),
       )

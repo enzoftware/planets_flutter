@@ -17,7 +17,10 @@ class DetailPage extends StatelessWidget{
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(planet.image, width: 96, height: 96,)
+              Hero(
+                  tag: "planet-hero-${planet.id}",
+                  child: Image.asset(planet.image, width: 96, height: 96,)
+              )
           ],
         ),
       ),
