@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'PlanetRow.dart';
+import 'package:flutter_planets/widgets/PlanetRow.dart';
 
 class HomePageBody extends StatelessWidget{
   @override
