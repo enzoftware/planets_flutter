@@ -73,5 +73,13 @@ flutter:
         fonts:
           - asset: assets/fonts/Poppins-SemiBold.ttf
             weight: 600
+          - asset: assets/fonts/Poppins-Regular.ttf
+            weight: 400
   assets:
     - assets/img/mars.png
+    - assets/img/earth.png
+    - assets/img/mercury.png
+    - assets/img/moon.png
+    - assets/img/neptune.png
+    - assets/img/ic_gravity.png
+    - assets/img/ic_distance.png
