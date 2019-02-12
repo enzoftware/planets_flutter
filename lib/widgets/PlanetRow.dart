@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets/model/Planet.dart';
 
-
-
-
 class PlanetRow extends StatelessWidget{
 
   final Planet planet;
@@ -12,10 +9,10 @@ class PlanetRow extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-
     final baseTextStyle = const TextStyle(
         fontFamily: 'Poppins'
     );
+
 
     final headerTextStyle = baseTextStyle.copyWith(
         color: Colors.white,
@@ -23,15 +20,20 @@ class PlanetRow extends StatelessWidget{
         fontWeight: FontWeight.w600
     );
 
+
     final regularTextStyle = baseTextStyle.copyWith(
         color: Color(0xffb6b2df),
         fontSize: 9,
         fontWeight: FontWeight.w400
     );
 
+
+
     final subHeaderTextStyle = regularTextStyle.copyWith(
         fontSize: 12
     );
+
+
 
     Widget _planetValue({String value, String image}) {
       return Row(
@@ -42,6 +44,8 @@ class PlanetRow extends StatelessWidget{
         ],
       );
     }
+
+
 
     Widget planetCardContent() {
       return Container(
@@ -87,6 +91,8 @@ class PlanetRow extends StatelessWidget{
       );
     }
 
+
+
     Widget planetThumbnail(String img) {
       return Container(
         margin: EdgeInsets.symmetric(
@@ -100,6 +106,7 @@ class PlanetRow extends StatelessWidget{
         ),
       );
     }
+
 
 
     final planetCard = Container(
@@ -119,8 +126,6 @@ class PlanetRow extends StatelessWidget{
         ],
       ),
     );
-
-
 
 
     return Container(
