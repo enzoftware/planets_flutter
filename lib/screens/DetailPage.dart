@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_planets/model/Planet.dart';
 
 class DetailPage extends StatelessWidget{
+  
   final Planet planet;
-
   DetailPage(this.planet);
 
   @override
