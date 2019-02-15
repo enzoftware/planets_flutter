@@ -5,7 +5,7 @@ class Separator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8),
-      height: 2,
+      height: 0,
       width: 18,
       color: Color(0xff00c6ff),
     );
