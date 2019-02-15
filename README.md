@@ -1,10 +1,12 @@
 # Flutter Planets
+Planets app made with Flutter. Just for fun.
+---
 
 <div align="center">
     <img src="art/planets.gif" width="325"/>
 </div>
 
-Planets app made with Flutter. Just for fun.
+
 
 ### Features
 - List planets.
