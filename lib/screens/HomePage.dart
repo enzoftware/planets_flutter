@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Color(0xFF736AB7),
       body: new Column(
         children: <Widget>[
-          GradientAppBar("Planets"),
+          GradientAppBar("Milkyway"),
           HomePageBody(),
         ],
       ),

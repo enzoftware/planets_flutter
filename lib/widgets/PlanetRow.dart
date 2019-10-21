@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_planets/model/Planet.dart';
+import 'package:flutter_planets/model/planet.dart';
 import 'package:flutter_planets/screens/DetailPage.dart';
-import 'package:flutter_planets/widgets/Separator.dart';
+import 'package:flutter_planets/widgets/separator.dart';
 import 'package:flutter_planets/commons/text_style.dart';
 
 class PlanetRow extends StatelessWidget{
@@ -15,6 +15,7 @@ class PlanetRow extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     print(planet.distance);
+
     final planetThumbnail = Container(
       margin: EdgeInsets.symmetric(
           vertical: 16.0
@@ -24,7 +25,7 @@ class PlanetRow extends StatelessWidget{
         tag: "planet-hero-${planet.id}",
         child: Image(
           image: AssetImage(planet.image),
-          height: 92.0,
+          height: 102.0,
           width: 92.0,
         ),
       ),
@@ -38,7 +39,7 @@ class PlanetRow extends StatelessWidget{
             children: <Widget>[
               Image.asset(image, height: 11.0),
               Container(width: 8.0),
-              Text(planet.gravity, style: Style.smallTextStyle),
+              Text(value, style: Style.smallTextStyle),
             ]
         ),
       );
@@ -53,7 +54,7 @@ class PlanetRow extends StatelessWidget{
         children: <Widget>[
           Container(height: 4.0),
           Text(planet.name, style: Style.titleTextStyle),
-          Container(height: 10.0),
+          Container(height: 7.0),
           Text(planet.location, style: Style.commonTextStyle),
           Separator(),
           Row(
@@ -84,7 +85,7 @@ class PlanetRow extends StatelessWidget{
 
     final planetCard = Container(
       child: planetCardContent,
-      height: horizontal ? 124.0 : 154.0,
+      height: horizontal ? 132.0 : 162.0,
       margin: horizontal
           ? EdgeInsets.only(left: 46.0)
           : EdgeInsets.only(top: 72.0),
