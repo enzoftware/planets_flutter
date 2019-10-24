@@ -1,29 +1,35 @@
-language: dart
-dart:
-  - stable
 os:
   - linux
 sudo: false
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test # you need this source to get the right version of libstdc++6
+      - ubuntu-toolchain-r-test
     packages:
       - libstdc++6
-      - fonts-droid-fallback
-install:
-  - echo 'Avoid default Travis CI install step' # this is to avoid an error with pub in Travis
+      - fonts-noto
+git:
+  depth: 3
+env:
+  - FLUTTER_VERSION=stable
+  - FLUTTER_VERSION=beta
+matrix:
+  allow_failures:
+    - env: FLUTTER_VERSION=beta
 before_script:
-  # - cd ..
-  - git clone https://github.com/flutter/flutter.git
-  - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
+  - git clone https://github.com/flutter/flutter.git -b $FLUTTER_VERSION
   - ./flutter/bin/flutter doctor
 script:
-  - cd $TRAVIS_BUILD_DIR
-  - ./flutter/bin/flutter packages get
   - ls
-  - flutter analyze --no-pub --no-current-package lib
-  - ./flutter/bin/flutter test
+  - ./flutter/bin/flutter packages get
+  - ./flutter/bin/flutter packages test
 cache:
   directories:
-    - $HOME/.pub-cache
+    - $HOME/shared/.pub-cache
+notifications:
+  email:
+    lizama.enzo@gmail.com
+
+# Only building master means that we don't run two builds for each pull request.
+branches:
+  only: [master]
