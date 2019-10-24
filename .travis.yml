@@ -19,9 +19,10 @@ before_script:
   - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
   - ./flutter/bin/flutter doctor
 script:
-  # - cd $TRAVIS_BUILD_DIR
+  - cd $TRAVIS_BUILD_DIR
   - ./flutter/bin/flutter packages get
-  # - flutter analyze --no-pub --no-current-package lib
+  - ls
+  - flutter analyze --no-pub --no-current-package lib
   - ./flutter/bin/flutter test
 cache:
   directories:
