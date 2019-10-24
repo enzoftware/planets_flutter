@@ -1,19 +1,29 @@
+language: dart
+dart:
+  - stable
 os:
   - linux
 sudo: false
 addons:
   apt:
-    # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
     sources:
-      - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
+      - ubuntu-toolchain-r-test # you need this source to get the right version of libstdc++6
     packages:
       - libstdc++6
-      - fonts-droid-fallback
+      - fonts-droid
+install:
+  - echo 'Avoid default Travis CI install step' # this is to avoid an error with pub in Travis
 before_script:
+  - cd ..
   - git clone https://github.com/flutter/flutter.git
-  - ./flutter/bin/flutter doctor
+  - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
+  - flutter doctor
 script:
-  - ./flutter/bin/flutter test
+  - cd $TRAVIS_BUILD_DIR
+  - flutter packages get
+  - flutter analyze --no-pub --no-current-package lib
+  - flutter test
+  - flutter packages pub publish --dry-run
 cache:
   directories:
     - $HOME/.pub-cache
