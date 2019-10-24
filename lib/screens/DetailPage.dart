@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/PlanetRow.dart';
 import '../model/planet.dart';
-import '../commons/text_style.dart';
+import '../commons/Style.dart';
 import '../widgets/Separator.dart';
 
 class DetailPage extends StatelessWidget{

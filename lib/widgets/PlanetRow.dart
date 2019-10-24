@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../model/planet.dart';
 import '../screens/DetailPage.dart';
 import '../widgets/separator.dart';
-import '../commons/text_style.dart';
+import '../commons/Style.dart';
 
 class PlanetRow extends StatelessWidget{
 
