@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_planets/screens/HomePage.dart';
+import 'package:planets_flutter/screens/HomePage.dart';
 
 void main() {
   //Routes.initRoutes();
