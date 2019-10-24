@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_planets/model/planet.dart';
-import 'package:flutter_planets/screens/DetailPage.dart';
-import 'package:flutter_planets/widgets/separator.dart';
-import 'package:flutter_planets/commons/text_style.dart';
+import '../model/planet.dart';
+import '../screens/DetailPage.dart';
+import '../widgets/separator.dart';
+import '../commons/text_style.dart';
 
 class PlanetRow extends StatelessWidget{
 

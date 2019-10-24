@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_planets/widgets/GradientAppBar.dart';
-import 'package:flutter_planets/widgets/HomePageBody.dart';
+import '../widgets/GradientAppBar.dart';
+import '../widgets/HomePageBody.dart';
 
 class HomePage extends StatelessWidget {
   @override
