@@ -5,10 +5,6 @@ jobs:
       - image: cirrusci/flutter
     steps:
       - checkout
-      - run:
-          name: Get properties
-          command: |
-                  wget $GOOGLESERVICESJSON -P android/app
       - run: flutter channel stable
       - run: flutter doctor
       - run: flutter test
