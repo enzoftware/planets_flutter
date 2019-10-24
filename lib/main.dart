@@ -5,6 +5,7 @@ void main() {
   //Routes.initRoutes();
   runApp(new MaterialApp(
     title: "Planets",
+    debugShowCheckedModeBanner: false,
     home: new HomePage(),
   ));
 }
