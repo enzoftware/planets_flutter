@@ -22,7 +22,7 @@ before_script:
 script:
   - ls
   - ./flutter/bin/flutter packages get
-  - ./flutter/bin/flutter packages test
+  - ./flutter/bin/flutter test
 cache:
   directories:
     - $HOME/shared/.pub-cache
